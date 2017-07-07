@@ -1,4 +1,4 @@
-#Handle returned string with Http in Angular 2+, Ionic 3+ 
+# Handle returned string with Http in Angular 2+, Ionic 3+ 
 
 Example project show how we can get body of response object from Http component. My student asked me what to do if the Web API returned string instead of JSON. 
 
