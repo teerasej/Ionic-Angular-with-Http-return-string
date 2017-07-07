@@ -17,7 +17,10 @@ export class HomePage {
   }
 
   send() {
-    let url = "http://nextflow.in.th/example/ionic/string-response/string.php";
+
+    // Update this URL to your endpoint that return string. 
+    // Example PHP file is 'string.php' in this project.
+    let url = "/string.php";
     console.log('Sending: ' + url);
 
 
