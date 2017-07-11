@@ -1,7 +1,6 @@
-import {Http} from '@angular/http';
+import {Http, Headers, RequestOptions} from '@angular/http';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-
 
 @Component({
   selector: 'page-home',
@@ -23,8 +22,17 @@ export class HomePage {
     let url = "/post-string.php";
     console.log('Sending: ' + url);
 
+    
+    // In fact, Angular's Http will set Content-Type to 'application/json' as default
+    // We can modify to other content's type if needed.
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json')
 
-    this.http.post(url, {}).subscribe(res => {
+    let options = new RequestOptions();
+    options.headers = headers;
+
+
+    this.http.post(url, {}, options).subscribe(res => {
       
       console.log('Got it.');
       
