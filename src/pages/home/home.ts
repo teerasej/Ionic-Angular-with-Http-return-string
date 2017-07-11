@@ -19,12 +19,12 @@ export class HomePage {
   send() {
 
     // Update this URL to your endpoint that return string. 
-    // Example PHP file is 'string.php' in this project.
-    let url = "/string.php";
+    // Example PHP files are in 'PHP' folder in this project.
+    let url = "/post-string.php";
     console.log('Sending: ' + url);
 
 
-    this.http.get(url).subscribe(res => {
+    this.http.post(url, {}).subscribe(res => {
       
       console.log('Got it.');
       
